@@ -1,0 +1,21 @@
+h1 {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150px;
+    align-items: center;
+    text-align: center;
+    color:#ffe2c9;
+}
+
+h2 {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    color:#ffe2c9;
+}
+
+body {
+    background-color: #2E1603;
+}
