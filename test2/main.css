@@ -1,95 +1,330 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-header {
+html {
+    cursor: url('assets/asset1.png'), auto;
+  }
+   
+  body {
+    background: #F4F0E5;
+    font-family: 'Space Mono';
+    font-style: normal;
   
-  color: color: #2E1603;
-  display: flex;
-  justify-content: space-between;
+  }
+  
+  /*LINKS*/
+  
+  .plain-link {
+    text-decoration: none;
+    color: #2E1603;
+  }
+  
+  .button-link {
+    text-decoration: none;
+    color: #2E1603;
+  }
+  
+  .button-link:hover {
+    color: #F4F0E5;
+  }
+  
+  a {
+    color: #2E1603;
+    text-decoration: none;
+  }
+  
+  /*NAV BAR*/
+  
+  nav {
+    padding-bottom: 3px;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .tabs {
+    font-size: 40px;
+  }
+  
+  .buttons {
+    
+    font-size: 2vh;
+    gap: 0px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  
+  .about, .letters {
+    display: inline-block;
+    border: solid 0.2vh #2E1603;
+    padding: 0.4vw 5vh;
+    
+    border-radius: 100px;
+    transition: ease-in 0.2s;
+  }
+  
+  .about:hover, .letters:hover {
+    background: #2E1603;
+  }
+  
+  hr {
+    border: 1.5px solid #2E1603;
+  }
+  
+  /*FILTER BAR*/
+  
+  .filter {
+    padding-left: 1.5vw;
+    font-size: 40px;
+  }
+  
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .filter-tabs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  
+  
+  
+  
+  .marquee {
+    font-size: 36px;
+    position: relative;
+    
+    max-width: 100%;
+    height: 50px;
+    overflow-x: hidden;
+  }
+  
+  .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 18s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  
+  .racist{
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee2 12s linear infinite;
+    animation-direction: forward;
+  
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  @keyframes marquee2 {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  
+  
+  
+  
+  .one {
+    transform: rotate(13.9deg) scale(1.1);
+    position: fixed;
+    left: 45vw;
+    bottom: 10vw;
+  }
+  
+  @media (max-width: 968px) {
+        .one {
+            scale: 0.7;
+        }
+    }
+  
+  .two {
+    transform: rotate(-3deg) scale(0.5);
+    position: fixed;
+    bottom: 10vw;
+    left: 28vw;
+  }
+   @media (max-width: 968px) {
+        .two {
+            scale: 0.7;
+        }
+    }
+  .three {
+    transform: rotate(-65.25deg) scale(0.4);
+    position: fixed;
+    bottom: -16vw;
+    left: 61vw;
+  }
+  @media (max-width: 968px) {
+        .three {
+            scale: 0.7;
+        }
+    }
+  
+  .four {
+  transform: rotate(-90.00deg) scale(0.56);
+    position: fixed;
+    bottom: -7vw;
+    left: 10vw;
+  }
+  
+  @media (max-width: 968px) {
+        .four {
+            scale: 0.7;
+        }
+    }
+  .five{
+  transform: rotate(-47.72deg) scale(0.6);
+    position: fixed;
+    bottom: -5vw;
+    left: 28vw;
+    /*z-index: -8;*/
+  }
+  
+  @media (max-width: 968px) {
+        .five {
+            scale: 0.7;
+        }
+    }
+  .six {
+    transform: rotate(-19.25deg) scale(0.37);
+    position: fixed;
+    bottom: 6vw;
+    left: 20vw;
+    /*z-index: -9;*/
+  }
+  @media (max-width: 968px) {
+        .six {
+            scale: 0.7;
+        }
+    }
+  
+  .seven {
+    transform: rotate(-70.25deg) scale(0.6);
+    position: fixed;
+    bottom: 10vw;
+    left: 55vw;
+  }
+  
+  @media (max-width: 968px) {
+        .seven {
+            scale: 0.7;
+        }
+    }
+  
+  
+  .container {
+    padding-top: 7%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: block;
+  }
+  
+  .header {
+   font-size: 8vw;
+   line-height: 0.95;
+    letter-spacing: -0.04em;
+  align-text: center;
+    padding-left: 25px;
+   
+   
+   
+  }
+  
+  
+  @media only screen and (max-width: 835px) {
+  
+  nav, .filter-bar, .filter-tabs, .header {
+  justify-content: center;
+  }
+  
+  }
+  }
+  
+  .four {
+  transform: rotate(-90.00deg) scale(0.56);
+    position: fixed;
+    bottom: -7vw;
+    left: 10vw;
+  }
+  
+  .five{
+  transform: rotate(-47.72deg) scale(0.6);
+    position: fixed;
+    bottom: -5vw;
+    left: 28vw;
+    /*z-index: -8;*/
+  }
+  
+  .six {
+    transform: rotate(-19.25deg) scale(0.37);
+    position: fixed;
+    bottom: 6vw;
+    left: 20vw;
+    /*z-index: -9;*/
+  }
+  
+  .seven {
+    transform: rotate(-70.25deg) scale(0.6);
+    position: fixed;
+    bottom: 10vw;
+    left: 55vw;
+  }
+  
+  
+  
+  .container {
+    padding-top: 7%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: block;
+  }
+  .sender {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  font-family: 'Space Mono';
+  }
   
-}
-
-header h1 {
-  font-size: 40px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav li {
-  margin-left: 20px;
-}
-
-nav li:first-child {
-  margin-left: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-section h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-section p {
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-.marquee {
-  white-space: nowrap;
-  overflow: hidden;
-  box-sizing: border-box;
-  padding: 20px;
-  border: 1px solid #333;
-}
-
-.marquee p {
-  display: inline-block;
-  margin-right: 100%;
-  animation: marquee 10s linear infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
+  
   }
-  100% {
-    transform: translateX(-100%);
+  
+  
+  /* CSS code for the image */
+  img {
+  width: 200px;
+  height: 200px;
+  transition: transform 0.2s ease;
   }
-}
-
-@media only screen and (max-width: 768px) {
- 
+  
+  /* CSS code for the image when hovered */
+  img:hover {
+  transform: translate(-2px, -2px);
+  }
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+  
+  

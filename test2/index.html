@@ -1,45 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My Responsive Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">	
-    <link rel="stylesheet" type="text/css" href="main.css">
-  </head>
-  <body>
-    <header>
-      <h1>THE LACK OF BROWN</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <h2>Welcome to my website!</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo eget massa id dignissim. Nulla tincidunt euismod purus a gravida.</p>
-      </section>
-      <section>
-        <h2>My Photos</h2>
-        <div class="gallery">
-          <img src= "img/fairandlovely.png">
-          <img src= "img/garnier.png">
-          <img src= "img/ivanaskin.png">
-          <img src= "img/lancome.png">
-          <img src= "img/sek.png">
-          <img src= "img/tony.png">
-          <img src= "img/natura.png">
-        </div>
-      </section>
-      <section>
-        <h2>My Marquee</h2>
-        <div class="marquee">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </section>
-    </main>
-  </body>
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">		
+<head>
+
+    <hr>
+
+        <div class="top">
+	<div class="marquee">
+		<div class="racist">
+			<div class="dialogue">    ->   Come explore the world of racist and harmful skin whitening products!   Come explore the world of racist and harmful skin whitening products!  Come explore the world of racist and harmful skin whitening products!   </div>
+		</div>
+	</div>
+	<hr>
+	<nav>
+	<div class="tabs">	
+		<div class="header"><a class="plain-link" href="index.html">&nbsp; &nbsp; THE LACK OF BROWN</a></div>
+	</div>
+		<div class="buttons">
+			<div class="about"><a class="button-link" href="../pages/page1/index.html">Shop</a></div>
+	
+		</div>
+	</nav>
+</div>
+	<hr> 
+
+
+	<title>Random Moving Images</title>
+	<style>
+		.container {
+			position: relative;
+			width: 1400px;
+			height: 550px;
+			border: 1px solid transparent;
+			margin: 0 auto;
+		}
+		.image {
+			position: absolute;
+			max-width: 300px;
+			max-height: 300px;
+			border-radius: 0%;
+            object-fit: contain;
+		}
+    
+    
+    @media only screen and (max-width: 768px)
+         {
+   .container {
+    width: 100%;
+    height: auto;
+  }
+  
+  .image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+         }
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="../images/fairandlovely.png" class="image" id="img1">
+		<img src="../images/garnier.png" class="image" id="img2">
+		<img src="../images/lancome.png" class="image" id="img3">
+		<img src="../images/sek.png" class="image" id="img4">
+		<img src="../images/tony.png" class="image" id="img5">
+		<img src="../images/ivanaskin.png" class="image" id="img6">
+        <img src="../images/pondstwo.png" class="image" id="img7">
+        <img src="../images/chanel.png" class="image" id="img8">
+        <img src="../images/natura.png" class="image" id="img9">
+        <img src="../images/sul.png" class="image" id="img10">
+
+	</div>
+
+	<script>
+		function moveImage() {
+			const container = document.querySelector('.container');
+			const images = container.querySelectorAll('.image');
+			const maxLeft = container.offsetWidth - images[0].offsetWidth;
+			const maxTop = container.offsetHeight - images[0].offsetHeight;
+
+			images.forEach(image => {
+				let newLeft = Math.floor(Math.random() * maxLeft);
+				let newTop = Math.floor(Math.random() * maxTop);
+				image.style.left = newLeft + 'px';
+				image.style.top = newTop + 'px';
+			});
+		}
+
+		setInterval(moveImage, 1000);
+	</script>
+</body>
 </html>

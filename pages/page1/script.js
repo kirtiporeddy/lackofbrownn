@@ -238,10 +238,11 @@ function changeToDarkMode() {
   if(isDark === true) {
   
   darkModeButton.textContent = "Dark mode";
-  modes.style.background = "#ffe2c9";
+  modes.style.background = "#F4F0E5";
   modes.style.color = "#2E1603";
-  buttonDarkMode.style.color = "#ffe2c9";
+  buttonDarkMode.style.color = "#F4F0E5";
   buttonDarkMode.style.background = "#2E1603";
+ 
   
   isDark = false;
   console.log("dark mode is off.");
@@ -250,9 +251,9 @@ function changeToDarkMode() {
     
   darkModeButton.textContent = "Light mode";
   modes.style.background = "#2E1603";
-  modes.style.color = "#ffe2c9";
+  modes.style.color = "#F4F0E5";
   buttonDarkMode.style.color = "#2E1603";
-  buttonDarkMode.style.background = "#ffe2c9";
+  buttonDarkMode.style.background = "#F4F0E5";
  
   isDark = true;
   console.log("dark mode is on!");
